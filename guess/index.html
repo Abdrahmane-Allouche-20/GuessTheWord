@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="question.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Guess The  Word </title>
+</head>
+<body class="">
+  
+    <header class="mx-auto w-full py-2 md:w-4/5 lg:w-3/4 my-0 md:my-2 lg:my-2 px-1 lg:px-4 bg-[#ffd736] rounded-none md:rounded-xl lg:rounded-xl text-center flex items-center justify-between">
+      <h1 class="text-sm md:text-lg lg:text-xl font-bold p-1 md:p-4 lg:p-4">Guess The Word Game</h1>
+      
+      <span class="score-display text-sm md:text-lg lg:text-xl font-bold p-1 md:p-4 lg:p-4">
+        Score: <span class="score">0</span>
+      </span>
+    </header>
+    <div class="flex justify-center items-center my-3">
+    <span class="capitalize text-sm md:text-lg lg:text-xl font-bold p-1 md:p-4 lg:p-4">
+        the word from : <span class="category"></span>
+      </span>
+      </div>
+    <section class="mx-auto max-w-6xl  mt-6">
+      <div class="flex flex-col-reverse md:flex-row lg:flex-row items-start justify-between gap-4">
+
+       <div class="game-area  text-center mx-auto mb-3 md:mb-0 lg:mb-0 ">
+        <div class="inputs "></div>
+          
+          
+      <div class='control flex justify-center items-center gap-4 mt-4'>
+        <button class="check py-2 px-3 md:py-2 md:px-6 lg:py-2 lg:px-6  text-sm  md:text-xl  lg:text-xl text-white flex-1 cursor-pointer rounded-lg font-bold bg-sky-400 ">check the word</button>
+        <button class="hint py-2 px-3 md:py-2 md:px-6 lg:py-2 lg:px-6  text-sm   md:text-xl  lg:text-xl text-white w-fit cursor-pointer rounded-lg font-bold bg-emerald-400 "><span></span> hints</button>
+        </div>
+       </div>
+       <div class="guide text-center mx-auto">
+         <div class="border-l-4 border-l-green-500 flex items-center bg-white p-2 md:p-3 lg:p-3 gap-2 lg:gap-2">
+          <div class="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full bg-green-500"></div>
+          <span class=" font-bold text-base  md:text-lg lg:text-lg"> Letter Is Correct and Right Place</span>
+        </div>
+        <div class="border-l-4 border-l-amber-300 flex items-center bg-white p-2 md:p-3 lg:p-3 gap-1 lg:gap-2 my-3">
+          <div class="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full bg-amber-300"></div>
+          <span class=" font-bold text-base md:text-lg lg:text-lg"> Letter Is Correct But Wrong Place</span>
+        </div>
+        <div class="border-l-4 border-l-red-500 flex items-center bg-white p-2 md:p-3 lg:p-3 gap-1 lg:gap-2">
+          <div class="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 rounded-full bg-red-500"></div>
+          <span class=" font-bold text-base  md:text-lg lg:text-lg">Letter Is Wrong</span>
+        </div>
+       </div>
+
+      </div>
+      
+    </section>
+    <div class="win fixed top-0 right-0 bg-black/90 w-full h-full flex justify-center items-center">
+      <div class="bg-white relative w-4/5 md:w-2/3 lg:w-2/5  p-3 md:p-10 lg:p-10 rounded-3xl border-2 md:border-4 lg:border-4 border-white outline outline-2 md:outline-4 lg:outline-4 outline-green-500 text-center">
+       <h1 class="result text-sm text-white md:text-3xl lg:text-3xl font-bold border-2 md:border-4 lg:border-4 border-white outline outline-2 md:outline-4 lg:outline-4 outline-green-500  absolute -top-5  md:-top-9 lg:-top-9  px-3 py-2  md:px-5 md:py-4 lg:px-5 lg:py-4 bg-green-500 rounded-3xl left-1/2 -translate-x-1/2  ">CONGRATULATIONS</h1>
+       <div class="stars flex justify-center items-center my-6">
+        <i class='bx bxs-star text-yellow-400'></i>
+        <i class='bx bxs-star text-yellow-400'></i>
+        <i class='bx bxs-star text-yellow-400'></i>
+       </div>
+       <h1 class="winLose text-lg md:text-2xl lg:text-2xl font-bold ">YOU WON !</h1>
+       <h1 class="noHint text-xl md:text-3xl lg:text-3xl font-bold my-3"> </h1>
+       <button class="playAgain bg-green-600 mt-6 md:mt-10 lg:mt-10 border-2 md:border-4 lg:border-4 outline outline-2 md:outline-4 lg:outline-4 outline-green-600 text-base md:text-xl lg:text-2xl border-white  px-6 py-2 md:px-8 md:py-3 lg:px-8 lg:py-3 text-white font-bold rounded-3xl ">Play Again </button>
+      </div>
+     
+   </div>
+
+   <div class="lose fixed top-0 right-0 bg-black/90 w-full h-full flex justify-center items-center">
+    <div class="bg-white relative w-4/5 md:w-2/3 lg:w-2/5  p-3 md:p-10 lg:p-10 rounded-3xl border-2 md:border-4 lg:border-4 border-white outline outline-2 md:outline-4 lg:outline-4 outline-red-500 text-center">
+     <h1 class="result text-xs text-white md:text-3xl lg:text-3xl font-bold border-2 md:border-4 lg:border-4 border-white outline outline-2 md:outline-4 lg:outline-4 outline-red-500  absolute -top-5  md:-top-9 lg:-top-9  px-3 py-2  md:px-5 md:py-4 lg:px-5 lg:py-4 bg-red-500 rounded-3xl left-1/2 -translate-x-1/2  ">GAME OVER</h1>
+     <div class="hearts flex justify-center items-center my-6">
+      <i class="fa-solid fa-heart-crack text-red-700"></i>
+      <i class="fa-solid fa-heart-crack text-red-700"></i>
+      <i class="fa-solid fa-heart-crack text-red-700"></i>
+     </div>
+     <h1 class="winLose text-lg md:text-2xl lg:text-2xl font-bold ">YOU LOSE !</h1>
+     <h1 class="noHint text-xl md:text-3xl lg:text-3xl font-bold my-3">The Word Is : <span class="wordLose text-red-500"> </span></h1>
+     <button class="playAgain bg-red-600 mt-6 md:mt-10 lg:mt-10 border-2 md:border-4 lg:border-4 outline outline-2 md:outline-4 lg:outline-4 outline-red-600 text-base md:text-xl lg:text-2xl border-white  px-6 py-2 md:px-8 md:py-3 lg:px-8 lg:py-3 text-white font-bold rounded-3xl ">Play Again </button>
+    </div>
+   
+ </div>
+   
+ </div>
+ <audio src="win.mp3" id="winSound"></audio>
+ <audio src="lost.mp3" id='lostSound'></audio>
+<script src="master.js"></script>
+</body>
+</html>
